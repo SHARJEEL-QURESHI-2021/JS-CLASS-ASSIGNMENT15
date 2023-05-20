@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More Button</title>
+    <style>
+        
+        .main {
+            border: 3px solid orange;
+            width: 500px;
+            background-color: black;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            color: red;
+            background-color: black;
+            border-bottom-color: red;
+            height: 40px;
+            padding-top: 30px;
+            margin-top: 0px;
+        }
+
+        .o{
+            
+            font-family: sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+
+        .clr {
+            color: red;
+        }
+        #clr {
+            color: red;
+        }
+        
+        button {
+            background-color: red;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            cursor: pointer;
+            margin-top: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .show {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+        
+        #hide {
+            display: none;
+            text-align: start;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+        </style>
+</head>
+
+<body>
+
+    <center>
+        <div class="main">
+            <div>
+                <center>
+                    <h1>PARAGRAPH</h1>
+                </center>
+                <hr id="size">
+            </div>
+            <div>
+                <p class="o" id="show"><span class="clr">&nbsp; (1)</span> Apple is a fruit that can be red or green in color.
+
+                    <br><span class="clr">&nbsp; (2)</span> It is sweet and sour in taste and colour is red.
+
+                    <br><span class="clr">&nbsp; (3)</span> In India, most of the apples are grown in Jammur.
+
+                    <br><span class="clr">&nbsp; (4)</span> Different recipes can be prepared from apples.
+
+                    <br><span class="clr">&nbsp; (5)</span> Apple has a lot of health benefits for people of all ages.
+
+                    <br><span class="clr">&nbsp; (6)</span> Ambri apple, Fuji apple, etc are some varieties of Apples.
+
+                    <br><span class="clr">&nbsp; (7)</span> Apple originated in Asia and is now available in country.
+
+                    <br><span class="clr">&nbsp; (8)</span> It helps to control diseases like sugar, heart disease, etc.
+
+                    <br><span class="clr">&nbsp; (9)</span> Winter season is suitable for growing apples.
+
+                    <br><span class="clr">&nbsp; (10)</span> Eating an apple every day is very good for your health.
+
+                    <p class="o" id="hide"><span id="clr">&nbsp; (11)</span>Apple is a fruit that can be red or green in color.
+
+                    <br><span id="clr">&nbsp; (12)</span> It is sweet and sour in taste and colour is red.
+
+                    <br><span id="clr">&nbsp; (13)</span> In India, most of the apples are grown in Jammu.
+
+                    <br><span id="clr">&nbsp; (14)</span> Different recipes can be prepared from apples.</p></p>
+                    <button onclick="change()">Read <span id="ml">More</span></button>
+            </div>
+        </div>
+        </div>
+    </center>
+    <script>
+        var show = document.getElementById('show');
+        var hide = document.getElementById('hide');
+        var clr = document.getElementById('clr');
+        var inner = show.innerHTML;
+        show.innerHTML = inner;
+        function change() {
+            if (hide.style.display == 'none' && clr.style.display == 'none') {
+                show.innerHTML = inner
+                hide.style.display = 'inline';
+                clr.style.display = 'inline';
+                document.getElementById('ml').innerHTML = "Less"
+            }
+            else {
+                show.innerHTML = inner;
+                hide.style.display = 'none';
+                clr.style.display = 'none';
+                document.getElementById('ml').innerHTML = "More"
+            }
+        }
+    </script>
+</body>
+
+</html>
